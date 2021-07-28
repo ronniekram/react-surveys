@@ -1,16 +1,18 @@
 const express = require('express');
-const app = express(); 
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+require('./models/User');
+require('./services/passport');
 
-app.get('/', (req, res) => {
-  res.send({ bye: 'buddy'});
+mongoose.connect(keys.mongoURI, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
 });
+
+const app = express();
+
+require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
-
-// app: underlying express app to register this route handler with
-// get: watch for incoming requests with this method
-// '/': watch for requests trying to access '/'
-// req: object representing the incoming request
-// res: object representing the outgoing response
-// res.send({ hi: 'there'}): immediately send some JSON back to whoever made this request
