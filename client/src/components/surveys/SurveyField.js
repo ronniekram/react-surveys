@@ -2,15 +2,26 @@
 // label and text input
 import React from 'react';
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default ({ input, label, meta: { error, touched } }) => {
+const SurveyField = ({ input, label, meta: { error, touched } }) => {
+  const renderType = () => {
+    if (label === 'Campaign Title' || label === 'Subject Line') {
+      return <input {...input}  className="input" />
+    } else {
+      return <textarea {...input} className="textarea" rows="3" /> 
+    }
+  }
+
   return (
-    <div>
-      <label>{label}</label>
-      <input {...input} style={{ marginBottom: '5px' }} />
-      <div className="red-text" style={{ marginBottom: '20px' }}>
+    <div className="field form-field">
+        <div className="control">
+        <label className="label">{label}</label>
+          {renderType()}
+        </div>
+      <div className="red-text" >
         {touched && error}
       </div>
     </div>
   );
 };
+
+export default SurveyField;

@@ -1,0 +1,43 @@
+.landing {
+  width: 90%;
+  margin: 3rem auto;
+  text-align: center;
+  color: white;
+  font-family: 'Oswald';
+}
+
+.landing-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px #2C424E;
+}
+
+.landing-tag {
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.links {
+  margin: 2rem;
+}
+
+.land-link {
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2C424E;;
+}
+
+.bang {
+  color: white;
+  font-size: 5rem;
+}
+
+.note {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: .75rem;
+}

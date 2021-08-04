@@ -63,7 +63,7 @@ module.exports = (app) => {
       body,
       recipients: recipients
         .split(',')
-        .map((email) => ({ email: email.trim() })),
+        .map((email) => ({ email: email.trim() })).slice(0, 5),
       _user: req.user.id,
       dateSent: Date.now(),
     });

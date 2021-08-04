@@ -1,0 +1,42 @@
+.survey-list {
+  width: 90%;
+  margin: 1rem auto;
+  color: #2C424E;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  margin: .5rem;
+  padding: .5rem;
+  background-color: #F2F6F8;
+  border: 1px solid #E46D58;
+  border-radius: .5rem;
+}
+
+.survey-title {
+  padding: .5rem .15rem;
+  font-family: 'Oswald';
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.survey-date {
+  padding: .5rem 1rem;
+  font-weight: 500;
+}
+
+.survey-body {
+  padding: .5rem 1rem;
+}
+
+.survey-responses{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+  padding: .25rem 1.5rem;
+  font-size: .9rem;
+  font-weight: 500;
+}

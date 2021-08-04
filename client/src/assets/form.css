@@ -1,0 +1,43 @@
+.survey-form {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
+  color: #2C424E;
+  background-color: #F2F6F8;
+  border: 1px solid #E46D58;
+  border-radius: .5rem;
+}
+
+.survey-form label {
+  font-size: 1.25rem;
+}
+
+label, input, textarea {
+  font-family: 'Roboto';
+  color: #2C424E;
+}
+
+.form-field {
+  margin: .25rem;
+  padding: .25rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.5rem .5rem;
+}
+
+.cancel {
+  background-color: #506CF0;
+}
+
+.next {
+  background-color: #506CF0;
+}
+
+.button-link {
+  text-decoration: none;
+  color: white;
+}

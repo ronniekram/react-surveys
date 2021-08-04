@@ -1,0 +1,86 @@
+@import url('./header.css');
+@import url('./landing.css');
+@import url('./form.css');
+@import url('./review.css');
+@import url('./survey.css');
+
+body {
+  background-color: #FE7860;
+  min-height: 100vh;
+  font-family: 'Roboto';
+}
+
+nav {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+a:hover {
+  color: white;
+}
+
+.feeter {
+  background-color: #FE7860;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  font-size: .75rem;
+  color: white;
+}
+
+.feeter a {
+  color: white;
+  font-weight: 700;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-button {
+  background-color: #506CF0;
+  padding: 1rem;
+  margin: .1rem .5rem;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+
+
+@media only screen and (min-width: 1140px){
+  .landing {
+    width: 50%;
+  }
+
+  .landing-title {
+    font-size: 4.5rem;
+  }
+
+  .landing-tag {
+    font-size: 2.75rem;
+  }
+
+  .add-button {
+    padding: 1.15rem;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  .survey-form {
+    width: 30%;
+  }
+
+  .survey-list {
+    width: 30%;
+    margin: 1rem auto;
+  }
+
+  .form-review {
+    width: 30%;
+  }
+  
+}

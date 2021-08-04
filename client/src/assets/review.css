@@ -1,0 +1,42 @@
+.form-review {
+  width: 90%;
+  padding: 1rem;
+  margin: 1rem auto;
+  color: #2C424E;
+  background-color: #F2F6F8;
+  border: 1px solid #E46D58;
+  border-radius: .5rem;
+}
+
+.form-review h5 {
+  padding: 1rem 0.5rem;
+  font-family: 'Oswald';
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.field-review {
+  margin: 1rem;
+};
+
+.field-label {
+  font-family: 'Roboto';
+  font-size: 1.5rem;
+  color: #2C424E;
+};
+
+.field-value {
+  font-size: .9rem;
+}
+
+.review-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.back {
+  background-color: #506CF0;
+}

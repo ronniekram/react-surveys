@@ -1,45 +1,28 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchSurveys } from '../../actions';
+import Survey from './Survey';
 
-class SurveyList extends Component {
-  componentDidMount() {
-    this.props.fetchSurveys();
-  }
+const SurveyList = () => {
+  const dispatch = useDispatch();
+  const surveys = useSelector(state => state.surveys);
 
-  renderSurveys() {
-    return this.props.surveys.reverse().map(survey => {
-      return (
-        <div className="card darken-1" key={survey._id}>
-          <div className="card-content">
-            <span className="card-title">{survey.title}</span>
-            <p>
-              {survey.body}
-            </p>
-            <p className="right">
-              Sent On: {new Date(survey.dateSent).toLocaleDateString()}
-            </p>
-          </div>
-          <div className="card-action">
-            <a>Yes: {survey.yes}</a>
-            <a>No: {survey.no}</a>
-          </div>
-        </div>
-      );
+  useEffect(() => {
+    dispatch(fetchSurveys());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const renderSurveys = () => {
+    return surveys && surveys.reverse().map(survey => {
+      return <Survey survey={survey} />
     });
-  }
+  };
 
-  render() {
-    return (
-      <div>
-        {this.renderSurveys()}
-      </div>
-    );
-  }
-}
+  return (
+    <div className="survey-list">
+      {renderSurveys()}
+    </div>
+  );
+};
 
-function mapStateToProps({ surveys }) {
-  return { surveys };
-}
-
-export default connect(mapStateToProps, { fetchSurveys })(SurveyList);
+export default SurveyList;

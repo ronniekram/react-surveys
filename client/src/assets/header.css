@@ -1,0 +1,24 @@
+.header {
+  width: 100%;
+  background-color: transparent;
+  font-family: 'Oswald';
+}
+
+.credits {
+  background-color: #FE7860;
+}
+
+.navbar-mobile {
+  background-color: transparent;
+}
+
+.brand {
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 2px #2C424E;
+}
+
+.add-credits {
+  letter-spacing: 1px;
+  background-color: #506CF0;
+}
